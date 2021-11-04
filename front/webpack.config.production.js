@@ -21,7 +21,7 @@ const isProduction =
 module.exports = merge(config, {
   target: 'web',
   entry: {
-    app: './src/.entrypoint/app/index.tsx',
+    index: './src/.entrypoint/app/index.tsx',
   },
   output: {
     path: outPath,
@@ -161,7 +161,7 @@ module.exports = merge(config, {
     // }),
 
     new HtmlWebpackPlugin({
-      filename: 'app.html',
+      filename: 'index.html',
       template: './src/assets/app.html',
       minify: {
         minifyJS: true,
