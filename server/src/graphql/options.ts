@@ -12,21 +12,6 @@ export class ListingOptions {
   limit?: number
 }
 
-// export function QueryListingOptions() {
-//   @ObjectType({ isAbstract: true })
-//   abstract class ListingOptionsClass {
-//     @Field({ nullable: true })
-//     offset?: number;
-//     @Field({ nullable: true })
-//     limit?: number;
-//     @Field({ nullable: true })
-//     order?: string;
-//     @Field({ nullable: true })
-//     orderBy?: string;
-//   }
-//   return ListingOptionsClass
-// }
-
 @ObjectType()
 export class Count {
   @Field(() => Int)

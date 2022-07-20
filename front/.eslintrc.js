@@ -22,8 +22,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    indent: ['error', 2],
-    'react/display-name': 0,
+    indent: ['error', 2,  { SwitchCase: 1 }],
     'no-unused-vars': 0,
     '@typescript-eslint/no-unused-vars': ['warn'],
     'jsx-quotes': ['error', 'prefer-single'],
@@ -31,7 +30,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     // 'no-console': 'error',
 
-    // note you must disable the base rule as it can report incorrect errors
+    // session you must disable the base rule as it can report incorrect errors
     'no-use-before-define': 'off',
     // '@typescript-eslint/no-use-before-define': ['warn'],
     'import/no-duplicates': ['error', { considerQueryString: true }],
@@ -80,5 +79,6 @@ module.exports = {
     // react hooks
     'react-hooks/rules-of-hooks': 'warn', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
+    'react/display-name': 'off',
   },
 }

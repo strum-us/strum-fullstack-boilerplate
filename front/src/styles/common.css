@@ -1,0 +1,2204 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  @apply text-base;
+}
+
+.spa {
+  /* @apply w-screen h-screen; */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.full {
+  @apply w-full h-full;
+}
+
+.vail {
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.5);
+  @apply fixed top-0 bottom-0 left-0 right-0 spa;
+  /* @apply bg-gray-600 dark:bg-black bg-opacity-40; */
+}
+
+.flex-row-start {
+  @apply flex flex-row items-center justify-start;
+}
+
+.flex-row-end {
+  @apply flex flex-row items-center justify-end;
+}
+
+.flex-col-start {
+  @apply flex flex-col items-center justify-start;
+}
+
+.flex-row-center {
+  @apply flex flex-row items-center justify-center;
+}
+
+.flex-col-center {
+  @apply flex flex-col items-center justify-center;
+}
+
+.flex-row-between {
+  @apply flex flex-row items-center justify-between;
+}
+
+.flex-col-between {
+  @apply flex flex-col items-center justify-between;
+}
+
+
+.hover-container .hover-view {
+  visibility: hidden;
+}
+
+.hover-container:hover>.hover-view {
+  visibility: visible;
+} 
+
+/* scroll bar */
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(55, 65, 81, 0.50);
+}
+
+/* Color */
+
+.bg-gray-850 {
+  background-color: #1B2431;
+}
+.text-gray-850 {
+  color: #1B2431;
+}
+.text-white {
+  color:#FFFFFF;
+}
+.border-gray-850 {
+  border-color: #1B2431;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                         Border, text, background for light / darkmode                            --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+
+/* .border-color-mild {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.dark .border-color-mild {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.border-color {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.dark .border-color {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.border-color-deep {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.dark .border-color-deep {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.border-color-point {
+  background-color: rgba(0, 0, 0, 0.70);
+}
+.dark .border-color-point {
+  background-color: rgba(255, 255, 255, 0.70);
+} */
+
+
+
+
+.bg-color-point {
+  @apply bg-gray-600 dark:bg-gray-100;
+}
+.bg-color-light {
+  @apply bg-gray-100 dark:bg-gray-600;
+}
+.bg-color-mild {
+  @apply bg-gray-50 dark:bg-gray-700;
+}
+.bg-color-light-mild {
+  @apply bg-white dark:bg-gray-800;
+}
+.bg-color {
+  @apply bg-white dark:bg-gray-850;
+}
+.bg-color-deep {
+  @apply bg-gray-200 dark:bg-gray-900;
+}
+
+
+.border-color-point {
+  @apply border-gray-600 dark:border-gray-100;
+}
+.border-color-light {
+  @apply border-gray-100 dark:border-gray-600;
+}
+.border-color-mild {
+  @apply border-gray-200 dark:border-gray-700;
+}
+.border-color {
+  @apply border-white dark:border-gray-800;
+}
+.border-color-deep {
+  @apply border-gray-200 dark:border-gray-900;
+}
+
+.text-color-disable {
+  @apply text-gray-600 dark:text-gray-500;
+}
+.text-color-light {
+  @apply text-gray-600 dark:text-gray-500;
+}
+.text-color-mild {
+  @apply text-gray-600 dark:text-gray-300;
+}
+.text-color {
+  @apply text-gray-800 dark:text-gray-200;
+}
+.text-color-deep {
+  @apply text-black dark:text-white;
+}
+.text-color-point {
+  @apply text-gray-600 dark:text-gray-100;
+}
+.text-color-hover {
+  @apply text-gray-400 dark:text-gray-600;
+}
+.text-color-active {
+  @apply text-gray-300 dark:text-gray-700;
+}
+
+.hover-color-light {
+  @apply hover:bg-white dark:hover:bg-gray-500 hover:text-gray-700 dark:hover:text-gray-200;
+}
+.hover-color-mild {
+  @apply hover:bg-gray-100 dark:hover:bg-gray-600 hover:text-gray-700 dark:hover:text-gray-200;
+}
+.hover-color {
+  @apply hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100;
+}
+.hover-color-deep {
+  @apply hover:bg-gray-300 dark:hover:bg-black hover:text-black dark:hover:text-white;
+}
+
+.hover-border-light {
+  @apply hover:border-white dark:hover:border-gray-500;
+}
+.hover-border-mild {
+  @apply hover:border-gray-100 dark:hover:border-gray-600;
+}
+.hover-border {
+  @apply hover:border-gray-200 dark:hover:border-gray-700;
+}
+.hover-border-deep {
+  @apply hover:border-gray-300 dark:hover:border-black;
+}
+
+
+.active-color-mild {
+  @apply active:bg-gray-100 dark:active:bg-gray-600 active:text-gray-700 dark:active:text-gray-200;
+}
+.active-color {
+  @apply active:bg-gray-200 dark:active:bg-gray-700 active:text-gray-900 dark:active:text-gray-100;
+}
+.active-color-deep {
+  @apply active:bg-gray-300 dark:active:bg-black active:text-black dark:active:text-white;
+}
+
+.hover {
+  @apply text-gray-900 bg-gray-200 dark:bg-gray-700 dark:text-gray-100;
+}
+
+/* text btn */
+.text-btn {
+  @apply cursor-pointer pointer-events-auto select-none text-color active:text-gray-300 dark:active:text-gray-700;
+  width: fit-content;
+
+}
+
+.text-btn:hover {
+  @apply text-color-point;
+}
+
+.drag-app {
+  -webkit-app-region: drag;
+}
+
+.text-overflow-hidden {
+  @apply overflow-hidden whitespace-nowrap overflow-ellipsis;
+}
+
+/* workflow 세로선 처리 ----------------------------------------------------------- */
+
+.workflow-item-container:first-child .workflow-item-line-top {
+  visibility: hidden;
+}
+
+.workflow-item-container:last-child .workflow-item-line-bottom {
+  visibility: hidden;
+}
+
+
+
+
+/* scroll bar ----------------------------------------------------------- */
+
+.overflow-y-auto {
+  overflow-y: overlay !important;
+}
+
+.overflow-x-auto {
+  overflow-x: overlay !important;
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+}
+
+.overflow-y-auto:hover::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 12px;
+  width: 12px;
+  border: 1px solid transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+  opacity: 0;
+  border-radius: 10px;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  background: transparent;
+  height: 8px;
+}
+
+.overflow-x-auto:hover::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 12px;
+  height: 12px;
+  border: 1px solid transparent;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+  opacity: 0;
+  border-radius: 10px;
+}
+
+.flex-grow-2{
+  flex-grow: 2;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+.scroll-hide::-moz-scrollbar {
+  display: none;
+}
+.scroll-hide {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-color: transparent transparent; /*just hides the scrollbar for firefox */
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                             tooltip                                               --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.react-tooltip-lite {
+  background: #2B3139;
+  border-radius: 6px;
+  color: white;
+}
+
+.react-tooltip-lite-arrow {
+  border-color: #2B3139;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                             typo                                                  --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.typo-tiny {
+  /* font-size: 0.625rem/* 10px */
+  /* line-height: 1rem/* 16px */
+  @apply text-xs;
+}
+
+.typo-small {
+  @apply text-sm;
+}
+
+.typo-body {
+  @apply text-base;
+}
+
+.typo-subtitle {
+  @apply text-lg;
+}
+
+.typo-title {
+  @apply text-xl;
+}
+
+.typo-headtitle{
+@apply text-4xl;
+letter-spacing: -1px;
+line-height: 47.5px;
+}
+
+.bold {
+  @apply font-bold ;
+}
+
+.medium{
+  @apply font-medium;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                     svg의 부모는 무조건 div.icon-container                                            --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.icon-container{
+  @apply flex-grow-0 flex-shrink-0 inline-block w-5;
+}
+.icon-container.full{
+  @apply w-full h-full;
+}
+.lg.icon-container{
+  @apply w-6;
+}
+/* .lg .icon-container{
+  @apply w-6;
+} */
+.sm .icon-container{
+  @apply w-4;
+}
+
+.logo .icon-container{
+  @apply w-12;
+}
+
+.logo.icon-container{
+  @apply w-12;
+}
+
+/* .icon-container svg{
+  @apply w-5;
+}
+.lg .icon-container svg{
+  @apply w-6;
+}
+
+.sm .icon-container svg{
+  @apply w-4;
+} */
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                             divider                                               --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+.divider-h{
+  @apply flex-shrink-0 w-full;
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 1px;
+}
+.divider-v {
+  @apply flex-shrink-0 h-full;
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 1px;
+}
+
+.dark .divider-h {
+  @apply flex-shrink-0 w-full;
+  background-color: rgba(255, 255, 255, 0.08);
+  height: 1px;
+}
+
+.dark .divider-v {
+  @apply flex-shrink-0 h-full;
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 1px;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                         Nav / Modal                                               --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+
+/* ------ nav ------ */
+.nav{
+  @apply flex flex-col overflow-y-auto bg-color;
+  width: 240px;
+}
+.modal .nav {
+  width: 200px;
+  min-width: 180px;
+}
+/* 
+.nav-header{
+  @apply flex items-center h-16 px-5 space-x-2 text-black transition-all duration-200 cursor-pointer select-none typo-body;
+} */
+/* .nav-header:hover{
+  @apply bg-gray-100;
+}
+.nav-header:active{
+  @apply bg-gray-200;
+} */
+.nav-section{
+  @apply px-4 mt-4 mb-1 text-gray-700 select-none typo-tiny;
+}
+/* .nav-footer{
+  @apply flex items-center h-16 px-5 text-black cursor-pointer select-none typo-body;
+  border-top: 1px solid #D4D4D8;
+}
+.nav-footer:hover{
+  @apply bg-gray-100;
+}
+.nav-footer:active{
+  @apply bg-gray-200;
+} */
+/* .nav-item{
+  @apply box-border text-black flex flex-row items-center h-10 px-5 space-x-1.5 cursor-pointer select-none;
+  
+} */
+.nav-item{
+  @apply flex items-center px-5 space-x-2 transition-all duration-200 cursor-pointer select-none bg-color text-color h-14 typo-body; 
+}
+.nav-item:hover{
+  @apply bg-color-mild;
+}
+.nav-item:active{
+  @apply bg-color-mild;
+}
+.nav-item.selected{
+  @apply bg-color-light;
+}
+
+.nav-item-body{
+  @apply typo-body whitespace-nowrap;
+  /* @apply flex flex-row items-center w-full h-full; */
+}
+
+
+
+/* ------ modal ------ */
+
+.modal{
+  @apply relative flex flex-row overflow-hidden border rounded shadow-xl border-color bg-color text-color;
+  min-width: 800px;
+  max-width: 1440px;
+
+}
+
+  
+/* .modal.full{
+  @apply fixed top-10 bottom-10 bg-primary right-10 left-10;
+
+} */
+
+
+.modal.sm{
+  /* @apply py-4; */
+  min-width: 420px;
+  max-width: 420px;
+}
+.modal.md {
+  /* @apply py-4; */
+  min-width: 640px;
+  max-width: 640px;
+}
+.modal.lg {
+  /* @apply py-8; */
+  min-width: 920px;
+  max-width: 920px;
+  min-height: 600px;
+  /* max-height: 600px; */
+  height: 85%;
+}
+
+.modal.calendar{
+  @apply py-4;
+  min-width: 420px;
+  max-width: 420px;
+}
+
+
+
+.modal-body {
+  @apply flex flex-col w-full max-h-full select-none ;
+}
+
+/* .modal-body.text-black-wrapper * {
+  @apply text-black;
+} */
+
+.modal-body-text{
+  @apply text-gray-500;
+}
+
+/* .modal.sm > .modal-body {
+  @apply px-0;
+}
+.modal.md > .modal-body{
+  @apply px-0;
+}
+.modal.lg > .modal-body{
+  @apply overflow-y-auto;
+} */
+
+.modal-body-header{
+  @apply pt-4 font-bold text-black select-none typo-title dark:text-gray-200;
+}
+
+.modal.sm > .modal-body > .modal-body-header{
+  @apply px-4 mt-0;
+}
+.modal.md > .modal-body > .modal-body-header{
+  @apply px-4 mt-0;
+}
+.modal.lg > .modal-body > .modal-body-header{
+  @apply px-6;
+}
+
+.modal-body-divider{
+  @apply flex-shrink-0 w-full my-5 bg-gray-300 ;
+  height: 1px;
+}
+
+.modal-body-title{
+  @apply mb-4;
+}
+.modal.sm > .modal-body > .modal-body-title{
+  @apply px-4;
+}
+.modal.md > .modal-body > .modal-body-title{
+  @apply px-4;
+}
+.modal.lg > .modal-body > .modal-body-title{
+  @apply px-6;
+}
+.modal-body-subtitle{
+  @apply typo-body;
+}
+
+/* .modal.sm > .modal-body > .modal-body-subtitle{
+  @apply px-10;
+}
+.modal.md > .modal-body > .modal-body-subtitle{
+  @apply px-10;
+}
+.modal.lg > .modal-body > .modal-body-subtitle{
+  @apply px-0;
+} */
+
+.modal.sm > .modal-body > .modal-body-footer{
+  @apply flex flex-row justify-end w-full px-4 py-2 space-x-2 bg-color text-color;
+}
+.modal.md > .modal-body > .modal-body-footer{
+  @apply flex flex-row justify-end w-full px-4 py-2 space-x-2 bg-color text-color;
+}
+.modal.lg > .modal-body > .modal-body-footer{
+  @apply flex flex-row justify-end w-full px-4 py-2 space-x-2 bg-color text-color;
+}
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                             dropdown                                              --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.dropdown{
+  @apply flex flex-col overflow-hidden rounded select-none shadow-4xl bg-gray-50 dark:bg-gray-800;
+  /* max-width: 389px; */
+}
+
+.dropdown.inner{
+  @apply rounded-none;
+  box-shadow: none;
+}
+.dropdown.inner .dropdown-item-h{
+  @apply py-2 hover:bg-blue-100 ;
+}
+.dropdown.inner .dropdown-item-title-text{
+  @apply  w-full h-full text-gray-500 typo-small hover:text-primary dark:text-gray-300;
+}
+
+.dropdown-item-menu {
+  @apply flex flex-row px-2 py-2 space-x-2 rounded cursor-pointer select-none text-color hover-color hover:text-black typo-body;
+  @apply items-center;
+}
+
+.dropdown-item-menu-full {
+  @apply flex flex-row items-center px-4 py-3 space-x-2 cursor-pointer select-none text-color hover-color hover:text-black typo-body;
+}
+
+.dropdown-item-menu-full .right{
+  @apply flex-grow flex-row-end;
+}
+
+.dropdown-item-menu-full .right .hotkey{
+  @apply px-2 py-1 rounded bg-color-mild text-color-mild;
+}
+
+.dropdown-item-h{
+  @apply flex flex-row items-center px-5 py-4 cursor-pointer select-none hover:bg-gray-200 place-content-between;
+}
+
+.dropdown-item-v{
+  @apply flex flex-col justify-center px-5 py-4 space-y-2 select-none hover:bg-gray-200;
+}
+
+.dropdown-item-title{
+  @apply flex items-center w-full space-x-2 text-gray-800 select-none dark:text-gray-300 typo-small whitespace-nowrap;
+}
+
+.dropdown-item-title-text{
+  @apply text-gray-800 dark:text-gray-300 typo-small whitespace-nowrap;
+}
+.dropdown-item-subtext{
+  @apply text-gray-500 select-none dark:text-gray-300 typo-tiny whitespace-nowrap medium;
+}
+.dropdown-divider{
+  @apply w-full mx-auto bg-gray-300;
+  height: 1px;
+}
+.dropdown-item-form{
+  @apply flex flex-row flex-grow-0 w-full px-4 py-3 space-x-2 text-gray-500 cursor-pointer select-none dark:text-gray-300 typo-small hover:bg-blue-100 hover:text-gray-800 place-content-between;
+}
+.dropdown-item-profile{
+  @apply text-gray-700 dark:text-gray-300 typo-tiny medium;
+}
+.dropdown-footer{
+  @apply  flex flex-row items-center px-5 py-4 cursor-pointer select-none place-content-between;
+}
+
+/* 
+.dropdown-item-h.profile,
+.dropdown-item-v.profile{
+  @apply py-4;
+}
+.dropdown-item:hover{
+  @apply bg-gray-200;
+}
+.dropdown-item-title-icon{
+  @apply h-5 text-gray-600 fill-current;
+} */
+
+.dropdown-v2-wrapper {
+  @apply rounded;
+}
+.dropdown-v2-wrapper:focus-within {
+  @apply bg-color-light;
+}
+
+.dropdown-v2 {
+  @apply absolute flex flex-col w-full rounded select-none shadow-4xl bg-gray-50 dark:bg-gray-800;
+  z-index: 1000;
+}
+
+.dropdown-v2-button {
+  @apply flex flex-row items-center justify-center;
+}
+
+.dropdown-v2-item {
+  @apply w-full space-x-2 rounded cursor-pointer select-none text-color typo-body bg-gray-50 dark:bg-gray-800;
+}
+/* @apply flex flex-row items-center justify-between px-2 py-2 space-x-2 rounded cursor-pointer select-none text-color typo-body bg-gray-50 dark:bg-gray-800; */
+.dropdown-v2-item.selected {
+  @apply bg-color-light;
+}
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                             card                                                  --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.card{
+  @apply flex flex-col overflow-hidden border-2 shadow-lg cursor-pointer bg-color rounded-xl border-color-point;
+}
+.card:hover {
+  @apply bg-color-mild;
+}
+.card:focus {
+  @apply bg-color-mild;
+}
+.card:active {
+  @apply bg-color-deep;
+}
+.card.selected {
+  @apply bg-color-light;
+}
+
+/* .card.col{
+  @apply flex-col ;
+} */
+.card-image{
+  @apply flex-shrink-0;
+}
+.card-image img{
+  @apply object-cover;
+}
+/* .card.col .card-image{
+  @apply w-full;
+} */
+.card-body{
+  @apply flex flex-col w-full h-full px-6 py-5 place-content-between;
+}
+
+.card-body header{
+  @apply flex flex-col space-y-2;
+}
+.card-body footer{
+  @apply flex flex-row place-content-between;
+}
+
+.card-body-title{
+  @apply font-semibold text-black select-none typo-body;
+}
+.card-body-text{
+  @apply flex flex-row text-gray-500 select-none typo-tiny place-content-between dark:text-gray-300;
+}
+
+/* .card-image{
+  background: url(../img/card-img.png) no-repeat center center;
+  background-size: cover;
+} */
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                         Toggle                                                                    --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.toggle {
+  @apply box-border flex flex-row items-center justify-center flex-grow-0 flex-shrink-0 space-x-2 rounded cursor-pointer select-none text-color max-w-max typo-body ;
+  @apply h-8 px-4 text-color-mild hover-color-mild; 
+}
+
+.toggle.stroke {
+  @apply border border-gray-50 dark:border-gray-700;
+}
+
+.toggle.lg {
+  @apply h-12 px-6 space-x-2 typo-subtitle;
+}
+
+.toggle.sm {
+  @apply px-2 space-x-1 h-7 typo-small;
+}
+
+.toggle.selected {
+  @apply text-black text-opacity-100 bg-gray-200 border-gray-400 dark:bg-gray-600 dark:text-white dark:border-gray-500 bold;
+}
+.toggle.unselected {
+  @apply opacity-30;
+}
+
+.toggle.icon{
+  @apply w-9 h-9;
+}
+.toggle.lg.icon{
+  @apply w-12 h-12;
+}
+.toggle.sm.icon{
+  @apply w-8 h-8;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                         Switch                                                                    --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+#switch {
+  @apply absolute;
+  /* hidden */
+  appearance: none;
+}
+.swtich_wrapper {
+  @apply relative;
+}
+.switch_label {
+  @apply relative inline-block w-12 h-6 border-2 cursor-pointer bg-color-mild border-color-point;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.switch_label:hover {
+  @apply bg-color-light;
+}
+.onf_btn {
+  @apply absolute inline-block w-5 h-5 left-1 bg-color-point;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+#switch:checked+.switch_label .onf_btn {
+  @apply left-5;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                         Button  //  svg의 부모는 무조건 div.icon-container                            --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+
+
+.btn {
+  @apply box-border flex flex-row items-center justify-center flex-grow-0 flex-shrink-0 space-x-1 rounded cursor-pointer select-none text-color max-w-max typo-body ;
+  /* transition: all 0.1s; */
+}
+
+.btn span {
+  @apply truncate;
+}
+
+.btn:not(.only-text) {
+  @apply box-border h-8 px-4 border bg-color-mild text-color-mild border-color; 
+}
+
+.btn.disabled{
+  @apply opacity-50 cursor-not-allowed text-color-disable bg-color-mild;
+}
+.btn.round {
+  @apply rounded-full;
+}
+.btn.toggle{
+  @apply justify-start;
+}
+.btn.toggle span{
+  @apply w-full;
+}
+.btn:not(.disabled):hover{
+  @apply bg-gray-200 border-gray-400 dark:bg-gray-600 dark:text-white dark:border-gray-500;
+}
+.btn:not(.disabled):active{
+  @apply bg-gray-300 border-gray-400 dark:bg-gray-500 dark:text-white dark:border-gray-400;
+}
+.btn:not(.disabled):focus{
+  @apply  bg-gray-200 border-gray-400 dark:bg-gray-600 dark:text-white dark:border-gray-500;
+}
+.btn.selected{
+  @apply bg-gray-200 border-gray-400 dark:bg-gray-600 dark:text-white dark:border-gray-500;
+}
+.btn.icon{
+  @apply cursor-pointer w-9 h-9;
+}
+.btn.lg.icon{
+  @apply w-12 h-12;
+}
+.btn.sm.icon{
+  @apply w-8 h-8;
+}
+.btn.xs.icon{
+  @apply w-6 h-6;
+}
+
+.btn.drop * {
+  @apply pointer-events-none;
+}
+
+.btn.lg{
+  @apply h-12 px-6 space-x-2 typo-subtitle bold;
+}
+.btn.sm{
+  @apply px-2 space-x-1 h-7 typo-small;
+}
+.btn.xs{
+  @apply h-5 px-1 space-x-1 typo-small;
+}
+
+.btn.wide {
+  @apply w-full space-x-1 max-w-none;
+}
+
+.btn.negative{
+  @apply  bg-red-50 border-negative text-negative; 
+}
+.btn.negative.disabled{
+  @apply text-red-300 border-red-200 bg-red-50; 
+}
+.btn.negative:not(.disabled.text-only):hover{
+  @apply  bg-red-100 border-negative text-negative; 
+}
+.btn.negative:not(.disabled.text-only):focus{
+  @apply  bg-red-100 border-negative text-negative; 
+}
+.btn.negative:not(.disabled):active{
+  @apply bg-red-200;
+}
+.btn.primary{
+  @apply bg-blue-100 border-primary text-primary;
+}
+.btn.stroke {
+  @apply text-white border-gray-200;
+}
+.btn.primary.disabled{
+  @apply text-primary-disabled bg-complimentary border-primary-disabled;
+}
+.btn.primary:not(.disabled.text-only):hover{
+  @apply  bg-blue-200 border-primary text-primary;
+}
+.btn.primary:not(.disabled):active{
+  @apply bg-blue-300;
+}
+.btn.primary:not(.disabled.text-only):focus {
+  @apply  bg-blue-200 border-primary text-primary;
+}
+.btn.solid {
+  @apply text-white border-primary bg-primary;
+}
+.dark .btn.solid {
+  @apply text-white border-primary bg-primary;
+}
+.btn.solid.disabled{
+  @apply text-white dark:text-black border-primary-disabled bg-primary-disabled;
+}
+.btn.solid:not(.disabled):hover{
+  @apply  bg-primary-hover border-primary-light;
+}
+.btn.solid:not(.disabled):active{
+  @apply bg-primary-active border-primary-light;
+}
+.btn.solid:not(.disabled):focus {
+  @apply  bg-primary-hover border-primary-light;
+}
+
+.btn.stroke:not(.white){
+  @apply bg-opacity-0 text-color ;
+}
+.btn.stroke.disabled{
+  @apply text-color-disable;
+}
+.btn.stroke:not(.disabled):hover{
+  background: rgb(236, 238, 241);
+}
+.btn.stroke:not(.disabled):active, .btn.stroke.active{
+  background: rgb(215, 218, 224);
+}
+.btn.stroke:not(.disabled):focus{
+  background: rgb(236, 238, 241);
+}
+
+/*----------  기본 ghost 버튼  ----------*/
+.btn.ghost:not(.white){
+  @apply bg-opacity-0 border-0 text-color ;
+}
+.btn.ghost.disabled{
+  @apply text-color-disable;
+}
+.btn.ghost:not(.disabled):hover{
+  /* background: rgb(236, 238, 241); */
+  @apply text-color-mild
+}
+.btn.ghost:not(.disabled):active, .btn.ghost.active{
+  /* background: rgb(215, 218, 224); */
+  @apply text-color-mild
+}
+.btn.ghost:not(.disabled):focus{
+  /* background: rgb(236, 238, 241); */
+  @apply border-2 border-color-point
+}
+
+
+/*----------  ghost 버튼 텍스트가 white 일 때  ----------*/
+.btn.ghost.white{
+  @apply text-white bg-opacity-0 border-0 dark:text-black ;
+}
+.btn.ghost.white.disabled{
+  @apply text-color-disable;
+}
+.btn.ghost.white:not(.disabled):hover{
+  @apply bg-white dark:text-black bg-opacity-10;
+}
+.btn.ghost.white:not(.disabled):active, .btn.ghost.text-white.active{
+  @apply bg-black dark:text-white bg-opacity-80;
+}
+.btn.ghost.white:not(.disabled):focus{
+  @apply bg-white dark:text-black bg-opacity-10;
+}
+
+
+
+/*----------  ghost 버튼 텍스트가 white 일 때  ----------*/
+.btn.only-text {
+  position: relative;
+  overflow: hidden;
+  background: unset;
+  /* border: none; */
+  padding: 0px 4px;
+}
+.btn.only-text:hover:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  opacity: 0.1;
+}
+
+.btn-form{
+  @apply flex flex-row flex-grow-0 flex-shrink-0 w-full mb-6 space-x-3 ;
+}
+
+.noti{
+  @apply relative;
+}
+
+.noti:after{
+  content: '';
+  top: -6px;
+  right: -4px;
+  @apply absolute z-10 block w-4 h-4 rounded-full shadow-md bg-negative;
+}
+
+.sm.noti:after{
+  top: -5px;
+  right: -5px;
+  @apply w-3 h-3;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                             Inputbox                                              --- */
+/* ---                                              by isaac                                             --- */
+/* --------------------------------------------------------------------------------------------------------- */
+.inputbox {
+  @apply items-center dark:focus-within:text-white focus-within:text-black;
+}
+
+.inputbox-bg-focus {
+  @apply bg-gray-100 dark:bg-gray-900;
+}
+.inputbox-bg-focus:focus {
+  @apply bg-white dark:bg-gray-900;
+}
+.inputbox-bg-focus:focus-within {
+  @apply bg-white dark:bg-gray-900;
+}
+
+.inputbox-transition {
+  @apply transition-colors duration-75 ease-in-out;
+}
+
+.inputbox-outline {
+  @apply px-2 border border-gray-200 rounded dark:border-gray-700 focus-within:border-primary;
+}
+
+.inputbox-input {
+  @apply w-full py-1 leading-8 text-gray-500 bg-gray-100 bg-opacity-0 dark:bg-gray-800 dark:text-gray-400 dark:focus:text-white focus:text-black;
+}
+
+.inputbox-input.pad {
+  @apply px-2;
+}
+
+.inputbox-input.lg {
+  @apply leading-10
+}
+.inputbox-input.sm {
+  @apply leading-6
+}
+
+.inputbox-content-editable {
+  @apply overflow-y-auto leading-6 break-words break-all whitespace-pre-wrap resize-none select-text
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                             Input                                                 --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+/*  */
+.input {
+  @apply relative flex flex-row items-center w-full h-10 px-2 space-x-2 overflow-hidden border rounded text-color bg-color border-color cursor-text whitespace-nowrap focus:text-black dark:focus:text-white;
+}
+.input.comment{
+  @apply flex-col h-40 overflow-y-auto place-content-between;
+}
+.input.comment > .input-body{
+  @apply w-32 h-40 pt-3 break-all whitespace-normal bg-negative;
+}
+/* .input-body {
+  @apply flex flex-row items-center w-full py-1 whitespace-nowrap;
+} */
+.input-body.icon{
+  @apply pl-6;
+}
+.input-form{
+  @apply flex flex-col w-full space-y-1 overflow-hidden;
+}
+.input-label{
+  @apply flex-shrink-0 mb-1 select-none text-color-mild typo-small whitespace-nowrap;
+}
+.input-negative{
+  @apply text-right select-none text-negative typo-tiny whitespace-nowrap;
+}
+.input-tooltip{
+  @apply flex flex-row items-center place-content-between;
+}
+.input-error{
+  @apply flex w-full h-3 overflow-hidden;
+}
+/* .input-form .input{
+  @apply flex-grow-0 flex-shrink-0;
+} */
+
+
+.input > .icon-container{
+  @apply absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input .btn .icon-container{
+  @apply relative;
+}
+
+
+.input.sm{
+  @apply h-8 px-2 typo-small;
+}
+.input.md{
+  @apply h-8 px-2 typo-body;
+}
+.input.lg{
+  @apply h-12 px-3 typo-subtitle;
+}
+.input.disabled{
+  @apply text-gray-300 bg-gray-100 cursor-default select-none;
+}
+.input.disabled > .input-body{
+  @apply bg-gray-100 cursor-default select-none;
+}
+.input > div{
+  @apply typo-body;
+}
+.input.md > div{
+  @apply typo-body bold;
+}
+.input.lg > div{
+  @apply typo-subtitle bold;
+}
+.input:focus-within{
+  @apply text-gray-800 bg-white border-primary;
+}
+.input:focus-within > .input-body{
+  @apply bg-white;
+}
+.input.white {
+  @apply text-black bg-white border-black;
+}
+.input.white > .input-body {
+  @apply bg-white;
+}
+.input.clear {
+  @apply text-color bg-color;
+  border: none;
+}
+.input.clear > .input-body {
+  @apply bg-color;
+  border: none;
+}
+.input.success:focus-within{
+  @apply border-success;
+}
+.input.negative:focus-within{
+  @apply bg-red-100 border-negative text-negative;
+}
+.input.negative:focus-within > .input-body{
+  @apply bg-red-100;
+}
+
+.input.has-value {
+  @apply text-black bg-white;
+}
+.input-body.has-value {
+  @apply bg-white text-black
+}
+
+/* .input > .input-body:not(:placeholder-shown) {
+  @apply text-black bg-white;
+} */
+
+/* .input:last-child:not(:placeholder-shown) {
+  @apply text-black bg-white;
+} */
+
+:focus{
+  outline: none;
+}
+
+/* .input-icon{
+  @apply flex-shrink-0 w-5;
+} */
+/* 
+
+ */
+
+
+div[contenteditable=true]:empty {
+  @apply text-color-mild;
+}
+div[contenteditable=true]:focus {
+  @apply text-color;
+}
+
+div[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  display: block;  
+  @apply text-color-mild cursor-text;
+}
+
+
+
+/* .input.disabled > div[contenteditable=true] {
+  @apply text-negative;
+} */
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                             info-link                                             --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.info-link{
+  @apply flex flex-row items-center space-x-1 cursor-pointer typo-body;
+}
+.info-link.copy{
+  @apply underline text-primary hover:text-blue-700 active:text-primary;
+}
+.info-link.lg{
+  @apply typo-subtitle;
+}
+.info-link.sm{
+  @apply typo-small;
+}
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                             textarea                                              --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.textarea{
+  @apply box-border h-32 px-5 py-5 text-gray-800 border border-gray-300 resize-none bg-gray-50 rounded-xl cursor-text;
+}
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                          checkbox                                                 --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.check-form{
+  @apply flex flex-row items-center space-x-1;
+}
+
+.check-form > label{
+  /* @apply typo-small; */
+}
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                             toggle                                                --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+input.toggle[type=checkbox]{
+  @apply hidden w-0 h-0;
+}
+
+label.toggle {
+  @apply relative block w-16 h-8 bg-gray-400 rounded-full cursor-pointer;
+}
+
+label.toggle:after {
+  @apply absolute w-6 h-6 bg-white rounded-full top-1 left-1;
+	content: '';
+	transition: 0.2s;
+}
+
+input:checked + label.toggle {
+  @apply bg-primary;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+  @apply w-6;
+}
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                         avatar                                                    --- */
+/* ---                         https://rive.app/login/?redirect=https://editor.rive.app                                                                          --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+
+.avatar {
+  @apply flex-shrink-0 inline-block w-8 h-8 rounded-full select-none;
+}
+
+.avatar-group .avatar:not(:first-child) {
+  margin-left: -12px;
+  -webkit-mask:radial-gradient(circle 19px at -4px 50%,transparent 99%,#fff 100%);
+      mask:radial-gradient(circle 19px at -4px 50%,transparent 99%,#fff 100%);
+}
+
+.avatar.xxl {
+  @apply w-2 h-2;
+}
+.avatar.xl {
+  @apply w-3 h-3;
+}
+.avatar.xs {
+  @apply w-4 h-4;
+}
+.avatar.sm {
+  @apply w-6 h-6;
+}
+.avatar.md {
+  @apply w-10 h-10;
+}
+.avatar.xxl {
+  @apply w-32 h-32;
+}
+
+.avatar-group .avatar.sm:not(:first-child) {
+  margin-left: -9px;
+  -webkit-mask:radial-gradient(circle 13px at -1px 50%,transparent 99%,#fff 100%);
+      mask:radial-gradient(circle 13px at -1px 50%,transparent 99%,#fff 100%);
+}
+
+.avatar img {
+  @apply select-none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+
+.avatar span {
+  @apply rounded-full;
+}
+
+.avatar.placeholder .placeholder-body{
+  @apply full flex-row-center typo-body bold ;
+}
+
+.avatar-group{
+  @apply relative flex flex-row items-center;
+}
+.avatar-group .avatar{
+  margin-left: -8px;
+}
+.avatar-group .avatar > div{
+  @apply shadow-lg;
+}
+.avatar-group .avatar:first-child{
+  @apply ml-0;
+}
+.avatar.circle{
+  @apply box-content border-4 border-success;
+}
+.avatar.noti{
+  @apply relative;
+  
+}
+.avatar.online{
+  @apply relative;
+}
+.avatar.offline{
+  @apply relative;
+}
+
+
+.avatar.noti:after{
+  content: '';
+  top: -2px;
+  right: -2px;
+  @apply absolute z-10 block w-3 h-3 rounded-full bg-negative;
+  
+}
+
+.avatar.sm.noti:after{
+  content: '';
+  top: -3px;
+  right: -3px;
+  @apply absolute z-10 block w-3 h-3 rounded-full bg-negative;
+}
+.avatar.online:after{
+  content: '';
+  bottom: 0px;
+  right:-3px;
+  @apply absolute z-10 block w-3 h-3 rounded-full bg-success;
+}
+
+.avatar.offline:after{
+  content: '';
+  bottom: 0px;
+  right:-3px;
+  @apply absolute z-10 block w-3 h-3 bg-gray-500 rounded-full;
+}
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                            svg-loder                                              --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.svg-loader{
+  display:flex;
+  position: relative;
+  align-content: space-around;
+  justify-content: center;
+}
+.loader-svg{
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke: rgb(64, 0, 148);
+}
+.loader-svg.bg{
+  stroke-width: 8px;
+  stroke: rgb(207, 205, 245);
+}
+
+.animate{
+  stroke-dasharray: 242.6;
+  animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;
+}
+
+@keyframes fill-animation{
+  0%{
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 0;
+  }
+  50%{
+    stroke-dasharray: 141.3;
+    stroke-dashoffset: 141.3;
+  }
+  100%{
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 282.6;
+  }
+}
+
+
+
+
+/* ----------- attachment ----------- */
+
+.attachment{
+  @apply relative;
+}
+
+.attachment img{
+  @apply object-cover;
+}
+
+.attachment .close{
+  @apply absolute w-5 h-5 text-white rounded-full cursor-pointer select-none bg-negative flex-row-center typo-tiny;
+  top: -6px;
+  right: -6px;
+  display:none;
+}
+
+.attachment:hover .close{
+  /* @apply flex ; */
+  display: flex !important;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* ---                                                                                                   --- */
+/* ---                                            badge                                                  --- */
+/* ---                                                                                                   --- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* 
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.25rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: .563rem;
+  padding-right: .563rem;
+  --tw-bg-opacity: 1;
+  background-color: hsla(var(--n)/var(--tw-bg-opacity,1));
+  --tw-border-opacity: 1;
+  border-color: hsla(var(--n)/var(--tw-border-opacity,1));
+  border-width: 1px;
+  --tw-text-opacity: 1;
+  color: hsla(var(--nc)/var(--tw-text-opacity,1));
+  border-radius: var(--rounded-badge,1.9rem);
+}
+
+
+.badge-sm {
+  height: 1rem;
+  font-size: .75rem;
+  line-height: 1rem;
+  padding-left: .438rem;
+  padding-right: .438rem;
+}
+
+.badge-md {
+  height: 1.25rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding-left: .563rem;
+  padding-right: .563rem;
+}
+
+.badge-lg {
+  height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-left: .688rem;
+  padding-right: .688rem;
+} */
+
+
+
+/*------------- steps -------------*/
+
+.steps{
+  @apply space-x-24 flex-row-center;
+}
+.step{
+  @apply relative w-10 h-10 bg-gray-100 rounded-full select-none bold text-primary flex-row-center;
+}
+.step.solid{
+  @apply text-white bg-primary;
+}
+.step:before{
+  content: '';
+  @apply absolute h-1 bg-gray-100 ;
+  width: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -96px;
+}
+.step.solid:before{
+  @apply bg-primary;
+}
+.step:first-child:before{
+  display: none;
+}
+
+/*------------- chips -------------*/
+.single-chip {
+  @apply flex flex-row items-center h-10 px-2 space-x-2 border rounded border-primary place-content-between;
+}
+
+.single-chip.gray {
+  @apply bg-gray-100;
+  border-color: transparent;
+}
+
+
+
+
+/**
+ *
+ * Slide
+ *
+ */
+
+div.chat-panel {
+  width: 240px;
+  transition: width ease-out 0.2s;
+  opacity: 1;
+}
+
+div.chat-panel.slide-close {
+  opacity: 0;
+  width: 0px;
+}
+
+
+/*------------- table -------------*/
+
+/*------------- table -------------*/
+
+.table-wrapper {
+  margin-bottom: 25px;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden; /* Clip any scrollbars that appear */
+}
+
+.table {
+  width: 100%;
+  display: grid;
+  overflow: auto;
+  /* grid-template-columns:
+    minmax(150px, 1fr)
+    minmax(150px, 1fr)
+    minmax(150px, 1fr)
+    minmax(150px, 1fr)
+    minmax(150px, 1fr) */
+}
+.table * {
+  box-sizing: border-box;
+}
+.table > div {
+  display: contents;
+}
+.cell-wrapper {
+  @apply flex items-center justify-center px-2 whitespace-nowrap;
+}
+
+.table .cell {
+  @apply h-10 p-2 overflow-x-auto select-none whitespace-nowrap;
+}
+.table .cell input {
+  @apply select-auto;
+}
+.cell-wrapper {
+  box-sizing: content-box;
+}
+.row .cell-wrapper {
+  border-color: black;
+  border-width: 0px 1px 1px 0px;
+}
+/* .table-header .row .cell-wrapper:last-child {
+  border-width: 0px 0px 1px 0px;
+} */
+.resize-handler {
+  @apply absolute w-3 h-full top-0 -right-1.5 z-10 select-none;
+  cursor: col-resize;
+}
+/* .resize-handler:last-child {
+  @apply absolute top-0 right-0 z-10 w-2 h-full;
+  cursor: col-resize;
+} */
+
+.cell input[type=number]::-webkit-outer-spin-button,
+.cell input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*------------------widget-------------------*/
+.widget-container {
+  /* @apply grid gap-x-4 gap-y-10; */
+  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+  @apply flex flex-col w-full h-full space-y-12
+}
+
+.widget-container-portable {
+  @apply w-full overflow-hidden border rounded border-color-mild bg-color-light-mild;
+  min-height: 252px;
+}
+
+.widget {
+  aspect-ratio: 1;
+}
+
+/*------------------ calendar -------------------*/
+.calendar-item {
+  @apply box-content absolute z-30 border rounded select-auto place-content-between opacity-80 border-primary active-color-deep text-color-deep;
+  background: rgba(69, 137, 239, 0.3);
+}
+
+.calendar-item:hover {
+  border: 1px solid rgba(165, 201, 255, 1);
+  background: rgba(69, 137, 239, 0.5);
+}
+
+/* calendar */
+.calendar-divider:first-child {
+  @apply border-t;
+}
+
+#calendar-modal {
+  /* @apply absolute top-0 left-0; */
+}
+
+/*------------------ grid item -------------------*/
+
+.grid-item-container {
+  @apply flex flex-col flex-shrink-0 w-56 h-56 overflow-hidden border rounded-lg cursor-pointer border-color-mild hover:border-opacity-90 dark:hover:border-gray-600
+}
+
+/*------------------ quill -------------------*/
+.ql-mention-list-container {
+  z-index: 1000;
+  @apply flex flex-col py-1 overflow-hidden border rounded shadow-xl select-none bg-gray-50 dark:bg-gray-800 border-gray-50 dark:border-gray-600;
+}
+.ql-mention-list-container .ql-mention-list-item {
+  @apply flex flex-row px-2 py-2 mx-1 space-x-2 rounded cursor-pointer select-none text-color bg-color hover-color hover:text-black typo-body;
+}
+.ql-mention-list-container .ql-mention-list-item.selected {
+  @apply flex flex-row px-2 py-2 mx-1 space-x-2 rounded cursor-pointer select-none text-color bg-color-mild hover-color hover:text-black typo-body;
+}
+.ql-clipboard {
+  position: fixed !important;
+}
+.ql-container {
+  height: auto !important;
+}
+.ql-editor {
+  height: auto !important;
+}
+.ql-editor pre, code, kbd, samp {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.dark .ql-editor.ql-blank::before {
+  @apply not-italic text-color-mild;
+}
+
+
+/*------------------ markdown container -------------------*/
+.markdown-container {
+  @apply p-10 space-y-2 overflow-y-auto rounded-lg pointer-events-auto;
+}
+
+
+/*------------------ inbox item -------------------*/
+.inbox-list-container {
+  @apply overflow-y-auto col-full;
+  max-width: 420px;
+  min-width: 420px;
+  flex-grow: 1;
+}
+
+/*------------------ inbox item -------------------*/
+.inbox-item-container {
+  @apply flex flex-col w-full pl-1 pr-2 py-3 space-y-0.5 select-none;
+  width: calc(100% - 24px);
+}
+.inbox-item-container:not(.disabled):hover {
+  /* @apply bg-color-mild; */
+}
+.inbox-item-container:not(.disabled):active {
+  @apply bg-color-light text-color-mild;
+}
+.inbox-item-container > .selected {
+  @apply absolute top-0 bottom-0 left-0 right-0 z-0 bg-color-light text-color-mild;
+}
+
+
+.inbox-item-container.unread {
+  @apply text-color-point bold;
+}
+
+.inbox-item-header {
+  @apply z-10 flex flex-row items-center flex-grow w-full space-x-2 overflow-hidden place-content-between;
+}
+
+.inbox-item-body {
+  @apply z-10 flex flex-row items-center w-full space-x-2 place-content-between pl-7;
+}
+
+
+/*------------------ common container -------------------*/
+
+.container-header {
+  @apply flex flex-row items-center w-full px-5 pointer-events-auto select-none h-14 place-content-between drag-app;
+  flex: 0 0 56px;
+}
+
+.container-header.absolute-header {
+  @apply absolute top-0 left-0 right-0 z-10 w-full pointer-events-none;
+}
+
+.container-header.portable {
+  @apply h-12
+}
+
+.container-header .title {
+  @apply font-semibold row-group-2;
+}
+
+/*------------------ row group -------------------*/
+.row-group {
+  @apply flex flex-row items-center space-x-0
+}
+
+.row-group-1 {
+  @apply flex flex-row items-center space-x-1.5
+}
+
+.row-group-2 {
+  @apply flex flex-row items-center space-x-2
+}
+
+.row-full-start {
+  @apply flex-grow min-h-0 flex flex-row full
+}
+
+.row-full-end {
+  @apply flex-grow min-h-0 flex flex-row full
+}
+
+.row-full {
+  @apply flex-grow min-h-0 flex-row-center full
+}
+
+
+/*------------------ col group -------------------*/
+.col-group {
+  @apply flex flex-col items-center space-y-0
+}
+
+.col-group-1 {
+  @apply flex flex-col justify-center space-y-1
+}
+
+.col-group-2 {
+  @apply flex flex-col items-center space-y-2
+}
+
+/*------------------ col full -------------------*/
+
+.col-full {
+  @apply flex-grow min-h-0 space-y-0 flex flex-col items-center full
+}
+.col-full-1 {
+  @apply flex-grow min-h-0 space-y-1 flex flex-col items-center full
+}
+.col-full-2 {
+  @apply flex-grow min-h-0 space-y-2 flex flex-col items-center full
+}
+.col-full.center {
+  @apply justify-center
+}
+
+/*------------------ navigation -------------------*/
+
+.navigation-container {
+  @apply flex flex-col w-56 flex-shrink-0 h-full px-2 pt-1 pb-6 select-none text-color
+}
+.dark .navigation-container {
+  background-color: #111827;
+  @apply flex flex-col w-56 flex-shrink-0 h-full px-2 pt-1 pb-6 select-none text-color
+}
+.navigation-container .header {
+  @apply flex flex-row px-1 pb-2 space-x-2 place-content-between
+}
+.navigation-container .section {
+  @apply flex flex-row items-end h-10 px-2 mt-2 place-content-between
+}
+
+.navigation-section {
+  @apply flex flex-row items-center flex-grow-0 flex-shrink-0 h-8 space-x-1 truncate rounded cursor-default select-none bold;
+  @apply text-gray-600 dark:text-gray-500;
+  @apply h-8 px-1;
+}
+
+/*------------------ navigation btn -------------------*/
+
+.navigation-btn {
+  @apply flex flex-row items-center flex-grow-0 flex-shrink-0 w-full space-x-1 truncate rounded cursor-default select-none typo-body focus:border-primary;
+  @apply text-gray-700 dark:text-gray-400;
+  @apply h-8 px-1;
+}
+.navigation-btn.ghost:not(.white){
+  @apply bg-opacity-0 border-0 text-color ;
+}
+.navigation-btn.ghost.disabled{
+  @apply text-color-disable;
+}
+.navigation-btn.ghost:not(.disabled):hover{
+  @apply text-color-mild
+}
+.navigation-btn.ghost:not(.disabled):active, .navigation-btn.ghost.active{
+  @apply text-color-mild
+}
+.navigation-btn:not(.disabled):hover{
+  @apply text-black bg-gray-200 border-gray-400 dark:bg-gray-600 dark:text-white dark:border-gray-500;
+}
+.navigation-btn:not(.disabled):active{
+  @apply text-black bg-gray-100 border-gray-400 dark:bg-gray-700 dark:text-white dark:border-gray-400;
+}
+.navigation-btn.selected{
+  @apply text-black bg-gray-200 border-gray-400 dark:bg-gray-600 dark:text-white dark:border-gray-500;
+}
+
+/*------------------ block item -------------------*/
+.block-item-container {
+  @apply flex flex-col w-full px-2 py-1.5 space-y-0.5 select-none border border-opacity-0;
+}
+.block-item-container:not(.disabled):hover {
+  /* @apply bg-color-mild; */
+}
+.block-item-container:not(.disabled):active {
+  @apply bg-color-mild text-color-mild;
+}
+.block-item-container.selected {
+  @apply bg-color-mild text-color;
+}
+.block-item-container.focused {
+  @apply text-color bg-color-light;
+}
+.block-item-container.unread {
+  @apply text-color-point bold;
+}
+.block-item-header {
+  @apply flex flex-row items-center flex-grow w-full space-x-2 overflow-hidden place-content-between;
+}
+.block-item-body {
+  @apply flex flex-row items-start w-full space-x-2 place-content-between;
+}
+.block-item-content {
+  @apply flex flex-row items-start w-full space-x-1;
+  min-height: 24px;
+}
+
+.block-item-body #multiple * {
+  /* min-height: 1em; */
+}
+.block-item-body span, b, strong, i, em, a, etc {
+  display: inline-block;
+  /* min-width: 1em; */
+  /* background-color: hsla(0, 50%, 50%, .5); this is only a visual aid; discard @ will */
+  vertical-align: middle; /* so elements w/ inline-block align w/ text correctly */ 
+}
+
+.block-item-icon {
+  @apply flex flex-row items-center justify-center flex-grow-0 flex-shrink-0 space-x-1 rounded cursor-pointer select-none text-color max-w-max typo-body focus:border-primary ;
+  /* transition: all 0.1s; */
+  min-height: 24px;
+}
+.block-item-icon:not(.disabled):hover{
+  @apply text-black bg-gray-200 border-gray-400 dark:bg-gray-600 dark:text-white dark:border-gray-500;
+}
+.block-item-icon:not(.disabled):active{
+  @apply text-black bg-gray-300 border-gray-400 dark:bg-gray-500 dark:text-white dark:border-gray-400;
+}
+.block-item-icon.selected{
+  @apply text-black bg-gray-200 border-gray-400 dark:bg-gray-600 dark:text-white dark:border-gray-500;
+}
+
+
+/*------------------ badge item -------------------*/
+.badge {
+  @apply flex flex-row items-center justify-center flex-grow-0 flex-shrink-0 h-5 px-2 space-x-1 text-xs rounded-lg cursor-pointer select-none text-color max-w-max typo-body text-color-point;
+}
+.badge.primary {
+  @apply bg-primary
+}
+.badge.secondary {
+  @apply bg-secondary
+}
+.badge.negative {
+  @apply bg-negative
+}
+
+/*------------------ gantt -------------------*/
+
+.gantt-days-container > * {
+  overscroll-behavior-x: contain;
+}
+
+
+
+/*---------------------- settings -----------------------*/
+.settings-wrapper {
+  @apply rounded-lg bg-color;
+}
+.settings-body{
+  @apply flex-grow max-h-screen overflow-y-auto modal lg bg-color;
+  width: 800px;
+  height: 640px;
+}
+.settings-nav{
+
+}
+.settings-content{
+  @apply px-12 py-5 overflow-y-auto modal-body;
+  width: 600px;
+}
+
+
+/*------------------ command finder -------------------*/
+.command-finder {
+
+}
+.command-finder-title {
+  @apply px-2 pt-3 text-color-disable;
+}
+
+.command-finder-item {
+  @apply flex flex-row items-center w-full px-4 py-3 space-x-2 cursor-pointer select-none text-color typo-body;
+}
+.command-finder-item:not(.focused) {
+  @apply opacity-70;
+}
+.command-finder-item.focused {
+  @apply opacity-100 bg-color-mild;
+}
+.command-finder-item * {
+  @apply pointer-events-none;
+}
+
+.command-finder-item .right{
+  @apply flex-grow flex-row-end;
+}
+
+.command-finder-item .right .hotkey{
+  @apply px-2 py-1 rounded bg-color-mild text-color-mild;
+}
+
+
+
+
+
+
+
+
+/*------------- demo -------------*/
+div.board-panel {
+  /* width: 820px; */
+  flex: 1 1 100px;
+  transition: flex ease-out 0.4s;
+  opacity: 1;
+}
+
+div.board-panel.slide-close {
+  opacity: 0;
+  /* width: 0px; */
+  flex: 0 0 0px;
+}
+
+.loader-container {
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.loader-container>div {
+  position: relative;
+  background: #4BD059;
+  width: 2px;
+  margin: 0px 1px;
+}
+
+.loader-container.active>div {
+  animation: audio-wave 2s ease-in-out infinite;
+}
+
+.loader-container.active .wave-2 {
+  animation-delay: 0.3s;
+}
+
+.loader-container.active .wave-3 {
+  animation-delay: 0.5;
+}
+
+.loader-container.active .wave-4 {
+  animation-delay: 0.7s;
+}
+
+
+@keyframes audio-wave {
+  0%,
+  100%,
+  50% {
+    height: 4px;
+    transform: scaleY(0);
+  }
+
+  25%,
+  75% {
+    transform: scaleY(1);
+    height: 12px;
+  }
+
+}

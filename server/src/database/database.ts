@@ -1,17 +1,5 @@
 import { Op, SyncOptions } from 'sequelize'
 
-import Admin from './Admin'
-import Annotation from './annotation'
-import FeedbackActionRecord from './feedbackActionRecord'
-import FeedbackCommnent from './feedbackComment'
-import FeedbackIssue from './feedbackIssue'
-import FeedbackNote from './feedbackNote'
-import FeedbackSnapshot from './feedbackSnapshot'
-import FeedbackSource from './feedbackSource'
-import File from './file'
-import NoteAccess from './noteAccess'
-import NoteActivity from './noteActivity'
-import Project from './project'
 import { Sequelize } from 'sequelize-typescript'
 import User from './user'
 import UserLog from './userLog'
@@ -37,10 +25,7 @@ const sequelize = new Sequelize({
   password: dbConnectConfig.password,
   database: dbConnectConfig.schema,
   models: [
-    User, Project, UserLog, Admin,
-    FeedbackIssue, FeedbackNote, FeedbackSource, FeedbackCommnent, Annotation, File,
-    FeedbackSnapshot, FeedbackActionRecord,
-    NoteActivity, NoteAccess,
+    User, UserLog, 
   ],
   operatorsAliases: {
     $and: Op.and,

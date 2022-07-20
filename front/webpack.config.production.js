@@ -172,10 +172,10 @@ module.exports = merge(config, {
         collapseInlineTagWhitespace: true,
       },
       favicon: './src/assets/logo.svg',
-      title: 'issuenote',
+      title: 'boilerplate',
       meta: {
-        title: 'issuenote',
-        description: 'issuenote',
+        title: 'boilerplate',
+        description: 'boilerplate',
         // keywords: Array.isArray(package.keywords)
         //   ? package.keywords.join(',')
         //   : undefined,

@@ -6,12 +6,11 @@ import UserLog, { ActivityType } from 'src/database/userLog'
 import { confirmPassword, generateJwtToken, generatePasswordHash, generateVerificationToken } from 'src/middlewares/auth/token'
 import { feedbackRecipient, mailingRepEmail } from 'config/serverenv'
 
-import Admin from 'src/database/Admin'
 import { Context } from 'src/types'
-import { EmailFormat } from 'src/middlewares/emailSender/emailFormat'
 import { customAlphabet } from 'nanoid/async'
 import { sendMail } from 'src/middlewares/emailSender'
 import sequelize from 'src/database/database'
+import { EmailFormat } from 'src/middlewares/emailSender/emailFormat'
 
 const nanoid = customAlphabet('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ', 9)
 
@@ -361,41 +360,6 @@ export class UserResolver {
       },
     })
   }
-
-  // @Query(() => [User])
-  // findByEmails(@Arg('emails') emails: string[]) {
-  //   const userDb = sequelize.getRepository(User)
-  //   return userDb.findAll({
-  //     where: {
-  //       email: { $in: emails },
-  //       userStatus: UserStatus.alive,
-  //     },
-  //   })
-  // }
-
-  // @Query(() => [User])
-  // findNonRegisterdByEmails(@Arg('emails') emails: string[]) {
-  //   const userDb = sequelize.getRepository(User)
-  //   return userDb.findAll({
-  //     where: {
-  //       email: { $in: emails },
-  //       userStatus: { $not: UserStatus.alive },
-  //     },
-  //   })
-  // }
-
-  // @Subscription()
-  // loginNotification() {
-
-  // }
-
-  // @Subscription({
-  //   topics: 'NOTIFICATIONS',
-  //   filter: ({ args, payload }) => args.priorities.includes(payload.priority),
-  // })
-  // loginNotification() {
-
-  // }
 }
 
 export async function generateUniqueUserID(transaction?: Transaction) {

@@ -1,7 +1,5 @@
 import * as dotenv from 'dotenv'
 
-import { DemographyAction, GACategory, GAFeatureAction, GAFiletalkAction, GAFiletalkCategory, GASettlementAction } from './EventConstant'
-
 import { URLs } from 'src/config/url'
 
 // dotenv.config()
@@ -25,8 +23,8 @@ export const loadGA = () => {
 }
 
 export const gaEvent = (
-  category: string | GACategory| GAFiletalkCategory,
-  action: string | GAFeatureAction | GASettlementAction | DemographyAction | GAFiletalkAction,
+  category: string,
+  action: string,
   label?: any,
 ) => {
   window.ga && ga('send', 'event', category, action, label || '')

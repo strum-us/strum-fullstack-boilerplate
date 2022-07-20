@@ -13,11 +13,4 @@ export default {
     // endpoint: 'https://filetalk-user-files.s3.ap-northeast-2.amazonaws.com/',
     cacheEndPoint: 'https://files.strum.us/',
   },
-  s3_us1: {
-    bucket: 'strum-user-files-uswest1',
-    region: 'us-west-1',
-    endpoint: 'https://strum-user-files-uswest1.s3-us-west-1.amazonaws.com/',
-    cacheEndPoint: 'https://strum-user-files-uswest1.s3-us-west-1.amazonaws.com/',
-    trashBucket: '',
-  },
 }

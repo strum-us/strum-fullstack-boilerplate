@@ -46,8 +46,9 @@ module.exports = merge(config, {
     new Dotenv(),
 
     new HtmlWebpackPlugin({
+      filename: 'index.html',
       template: './src/assets/app.html',
-      title: 'React, Tailwind and Webpack 5 Boilerplate',
+      title: 'React fullstack boilerplate',
       favicon: './src/assets/logo.svg',
     }),
   ],

@@ -107,7 +107,7 @@ async function main() {
   })
 
   httpServer.listen(port, () => {
-    console.log('server startd on localhost:3000')
+    console.log('server startd on localhost:' + port)
   })
 
   initApis(app)

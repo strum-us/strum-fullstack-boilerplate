@@ -32,7 +32,7 @@ export async function sendMail(title: string, recipients: string[], html: string
   // recipients.forEach((r) => { emails += `${r}, ` })
   return Promise.all(recipients.map(async (email) =>
     await transporter.sendMail({
-      from: `Issuenote <${GOOGLE_ACCOUNT.user}>`,
+      from: ` <${GOOGLE_ACCOUNT.user}>`,
       to: email,
       subject: title,
       html: html,
@@ -50,7 +50,7 @@ export async function sendPublishMail(req: any, res: any) {
       </head>
       <body>
         <p style="font-size:16px">Hello,</p>
-        <p style="font-size:16px">${sender} Send Issuenote to you</p>
+        <p style="font-size:16px">${sender} Send to you</p>
         <a style="font-size:16px" href='${url}'>Open document</a>
       </body>
     </html>

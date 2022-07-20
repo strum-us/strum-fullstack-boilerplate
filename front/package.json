@@ -1,9 +1,11 @@
 {
-  "name": "issuenote",
-  "version": "0.1.29",
+  "name": "fullstack-boilerplate",
+  "version": "0.1.1",
   "private": true,
   "main": "src/electron.js",
   "scripts": {
+    "tailwind:build": "tailwind build -i src/styles/common.css -o src/styles/tailwind.css",
+    "tailwind:watch": "tailwind-watch",
     "schema": "apollo schema:download --endpoint=http://localhost:3000/graphql schema.json",
     "gen": "yarn schema && cd graphql-gen && yarn gen",
     "rover": "rover graph introspect http://localhost:3000/graphql | APOLLO_KEY=service:quda-app:ygmRdZujinTbtUbn_OPJUA rover graph publish quda-app@current --schema -",
