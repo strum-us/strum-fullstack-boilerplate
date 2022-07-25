@@ -13,7 +13,7 @@ import passport from 'passport'
 import sequelize from './database/database'
 
 async function main() {
-  const PORT = process.env.PORT || 3000
+  const PORT = process.env.PORT || 3030
   const pubsub = new PubSub()
 
   const schema = await getSchema()

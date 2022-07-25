@@ -1,9 +1,9 @@
 import React from 'react'
 
-export function Error() {
+export function Inbox() {
   return (
     <div>
-      error
+      inbox
     </div>
   )
 }

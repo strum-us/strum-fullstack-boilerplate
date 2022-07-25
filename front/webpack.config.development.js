@@ -15,7 +15,7 @@ module.exports = merge(config, {
     net: 'empty',
   },
   entry: {
-    app: './src/.entrypoint/app/index.tsx',
+    app: './src/entrypoint/app/index.tsx',
   },
   module: {
     rules: [

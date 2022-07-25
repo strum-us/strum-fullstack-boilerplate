@@ -2,7 +2,7 @@ module.exports = {
   client: {
     service: {
       name: 'quda-app',
-      url: 'http://localhost:3000/graphql',
+      url: 'http://localhost:3030/graphql',
     },
   },
 }

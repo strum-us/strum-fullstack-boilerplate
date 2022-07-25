@@ -1,5 +1,7 @@
 import { Op, SyncOptions } from 'sequelize'
 
+import ChattingMessage from './chatting/chattingMessage'
+import ChattingRoom from './chatting/chattingRoom'
 import { Sequelize } from 'sequelize-typescript'
 import User from './user'
 import UserLog from './userLog'
@@ -25,7 +27,10 @@ const sequelize = new Sequelize({
   password: dbConnectConfig.password,
   database: dbConnectConfig.schema,
   models: [
-    User, UserLog, 
+    User,
+    UserLog,
+    ChattingRoom,
+    ChattingMessage
   ],
   operatorsAliases: {
     $and: Op.and,

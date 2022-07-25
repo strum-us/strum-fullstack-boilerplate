@@ -1,10 +1,8 @@
-import { BrowserRouter, HashRouter, useHistory } from 'react-router-dom'
-import React, { useEffect, useState } from 'react'
-
 import { AppFrame } from './AppFrame'
 import { AutoUpdateNotification } from './AutoUpdateNotification'
-// import { AutoUpdateNotification } from './AutoUpdateNotification'
-import { NetworkNotification } from './NetworkNotification'
+import { HashRouter } from 'react-router-dom'
+import React from 'react'
+import { RecoilRoot } from 'recoil'
 import Routes from './Routes'
 
 export default function Root() {
@@ -20,9 +18,11 @@ export default function Root() {
         }
         {/* </ElectronGateway> */}
         {/* <NetworkNotification/> */}
-        <AppFrame>
-          <Routes />
-        </AppFrame>
+        <RecoilRoot>
+          <AppFrame>
+            <Routes />
+          </AppFrame>
+        </RecoilRoot>
       </Router>
     </React.StrictMode>
   )

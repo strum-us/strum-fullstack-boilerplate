@@ -24,7 +24,6 @@ function renderApp() {
   }
 }
 
-
 const closeSlash = () => {
   const preloader: HTMLElement | null = document.getElementById('preloader')
   preloader && preloader.remove()

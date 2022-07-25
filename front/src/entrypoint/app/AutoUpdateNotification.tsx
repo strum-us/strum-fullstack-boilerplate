@@ -17,16 +17,16 @@ type NotificationStatus = {
 }
 
 export function AutoUpdateNotification() {
-  const [notification, setNotification] = useState<NotificationStatus>({ 
-    status: Status.none, 
-    progress: 0, 
-    close: false
-  }) 
-  
+  const [notification, setNotification] = useState<NotificationStatus>({
+    status: Status.none,
+    progress: 0,
+    close: false,
+  })
+
   const electron = require('electron')
 
   const handleNotificationStatus = (status: Status) => {
-    setNotification({ status: status, progress: 0, close: false})
+    setNotification({ status: status, progress: 0, close: false })
   }
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export function AutoUpdateNotification() {
       electron.ipcRenderer.removeAllListeners('checking-for-update')
       handleNotificationStatus(Status.checking)
     })
-    
+
     electron.ipcRenderer.on('update-not-available', () => {
       console.log('update-not-available --- notification')
       electron.ipcRenderer.removeAllListeners('update-not-available')
@@ -77,7 +77,7 @@ export function AutoUpdateNotification() {
     notiContent = <p className='text-sm text-black'>
         A new update is available. <br/>
         Downloading now... {notification?.progress !== 0 ? notification?.progress + '%' : null}
-      </p>
+    </p>
   } else if (notification.status === Status.downloaded) {
     const handleClick = () => {
       electron.ipcRenderer.send('restart-app')
@@ -95,23 +95,23 @@ export function AutoUpdateNotification() {
       </div>
     </>
   }
-  
+
   const handleClose = () => {
-    setNotification({...notification, close: true})
+    setNotification({ ...notification, close: true })
   }
-  
+
   return (
-    <div className={`absolute z-50 p-3 bg-white rounded-lg shadow-lg min-w-max max-w-200 left-3 bottom-3 ${notification?.close ? 'invisible': ''}` } >
+    <div className={`absolute z-50 p-3 bg-white rounded-lg shadow-lg min-w-max max-w-200 left-3 bottom-3 ${notification?.close ? 'invisible' : ''}` } >
       <div className='relative w-full h-full'>
         <div className='pr-6 '>
           {notiContent}
         </div>
-        <div 
-          className='absolute top-0 right-0 flex flex-row items-center justify-center w-5 h-5 text-black rounded cursor-pointer hover:bg-dim-light hover:bg-opacity-70' 
+        <div
+          className='absolute top-0 right-0 flex flex-row items-center justify-center w-5 h-5 text-black rounded cursor-pointer hover:bg-dim-light hover:bg-opacity-70'
           onClick={handleClose}
         >
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 9.4L22.6 8L16 14.6L9.4 8L8 9.4L14.6 16L8 22.6L9.4 24L16 17.4L22.6 24L24 22.6L17.4 16L24 9.4Z" fill="currentColor"/>
+          <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path d='M24 9.4L22.6 8L16 14.6L9.4 8L8 9.4L14.6 16L8 22.6L9.4 24L16 17.4L22.6 24L24 22.6L17.4 16L24 9.4Z' fill='currentColor'/>
           </svg>
 
         </div>

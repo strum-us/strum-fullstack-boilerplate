@@ -21,7 +21,7 @@ const isProduction =
 module.exports = merge(config, {
   target: 'web',
   entry: {
-    index: './src/.entrypoint/app/index.tsx',
+    index: './src/entrypoint/app/index.tsx',
   },
   output: {
     path: outPath,
